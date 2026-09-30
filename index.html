@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>🌾 Farm Management System</h1>
+        <p>Salesforce-based Agricultural Management</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#farm">Farm</a>
+    <a href="#crop">Crop</a>
+    <a href="#farmer">Farmer</a>
+    <a href="#buyer">Buyer</a>
+    <a href="#reports">Reports</a>
+</nav>
+
+<main>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Farms</h3>
+                <p id="farmCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Crops</h3>
+                <p id="cropCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Farmers</h3>
+                <p id="farmerCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Buyers</h3>
+                <p id="buyerCount">0</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Farm -->
+    <section id="farm">
+        <h2>Farm Management</h2>
+
+        <form id="farmForm">
+
+            <input
+                type="text"
+                id="farmName"
+                placeholder="Farm Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Location"
+                required
+            >
+
+            <input
+                type="number"
+                id="farmArea"
+                placeholder="Area (Acres)"
+                min="1"
+                required
+            >
+
+            <button type="submit">Add Farm</button>
+
+        </form>
+
+        <div id="farmRecords"></div>
+    </section>
+
+
+    <!-- Crop -->
+    <section id="crop">
+        <h2>Crop Management</h2>
+
+        <form id="cropForm">
+
+            <input
+                type="text"
+                id="cropName"
+                placeholder="Crop Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="cropType"
+                placeholder="Crop Type"
+                required
+            >
+
+            <input
+                type="number"
+                id="cropArea"
+                placeholder="Area (Acres)"
+                min="1"
+                required
+            >
+
+            <select id="cropStatus" required>
+                <option value="">Select Status</option>
+                <option value="Growing">Growing</option>
+                <option value="Ready">Ready</option>
+                <option value="Harvested">Harvested</option>
+            </select>
+
+            <button type="submit">Add Crop</button>
+
+        </form>
+
+        <div id="cropRecords"></div>
+    </section>
+
+
+    <!-- Farmer -->
+    <section id="farmer">
+        <h2>Farmer Management</h2>
+
+        <form id="farmerForm">
+
+            <input
+                type="text"
+                id="farmerName"
+                placeholder="Farmer Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="farmerPhone"
+                placeholder="Phone Number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+            <input
+                type="email"
+                id="farmerEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <button type="submit">Add Farmer</button>
+
+        </form>
+
+        <div id="farmerRecords"></div>
+    </section>
+
+
+    <!-- Buyer -->
+    <section id="buyer">
+        <h2>Buyer Management</h2>
+
+        <form id="buyerForm">
+
+            <input
+                type="text"
+                id="buyerName"
+                placeholder="Buyer Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="buyerPhone"
+                placeholder="Phone Number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+            <input
+                type="email"
+                id="buyerEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <button type="submit">Add Buyer</button>
+
+        </form>
+
+        <div id="buyerRecords"></div>
+    </section>
+
+
+    <!-- Reports -->
+    <section id="reports">
+        <h2>Reports & Analytics</h2>
+
+        <div class="report-box">
+            <h3>Farm Productivity Report</h3>
+            <p>Monitor farms, crops and agricultural activities.</p>
+        </div>
+
+        <div class="report-box">
+            <h3>Crop Report</h3>
+            <p>View crop details, area and current status.</p>
+        </div>
+
+        <div class="report-box">
+            <h3>Farmer & Buyer Report</h3>
+            <p>Manage farmer and buyer information.</p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Farm Management System</p>
+    <p>Salesforce-based Agricultural Management System</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
